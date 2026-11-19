@@ -1,0 +1,140 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="5">
+    <title>Cold Storage Monitoring Dashboard</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #1bf7ec;
+        margin: 0;
+        padding: 20px;
+        color: #243247;
+      }
+
+      .container {
+        max-width: 750px;
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+        color: #123d69;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #64748b;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.067);
+      }
+
+      .value {
+        font-size: 35px;
+        font-weight: bold;
+        color: #1683d8;
+      }
+
+      .warning {
+        background: #fee2e2;
+        color: #dc2626;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .normal {
+        background: #dcfce7;
+        color: #15803d;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .control {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        margin: 5px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      .on { background: #16a34a; }
+      .off { background: #fa0909; }
+
+      .status {
+        text-align: center;
+        color: #16a34a;
+        font-weight: bold;
+      }
+
+      @media(max-width: 500px) {
+        .cards { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>COLD STORAGE MONITORING</h1>
+      <p class="subtitle">Nasikhatul Hidayah - 25025001 | Auto refresh 5s</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Suhu Ruangan</h3>
+          <div class="value">24.0 °C</div>
+        </div>
+
+        <div class="card">
+          <h3>Kelembapan</h3>
+          <div class="value">40.0 %</div>
+        </div>
+      </div>
+
+
+      <div class="control">
+        <h3>STATUS_CHILLER : OFF (MATI)</h3>
+        <p>
+          <a class="btn on" href="/chiller/on">NYALAKAN CHILLER</a>
+          <a class="btn off" href="/chiller/off">MATIKAN CHILLER</a>
+        </p>
+      </div>
+
+      <div class="control">
+        <h3>STATUS_EXHAUST FAN : OFF (MATI)</h3>
+        <p>
+          <a class="btn on" href="/exhaust/on">NYALAKAN EXHAUST</a>
+          <a class="btn off" href="/exhaust/off">MATIKAN EXHAUST</a>
+        </p>
+      </div>
+  </body>
+  </html>
